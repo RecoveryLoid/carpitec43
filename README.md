@@ -4,6 +4,10 @@ Página web para la carpintería **carpitec43**, esta es la **versión estática
 
 Web : www.carpitec43.com
 
+## Web client
+
+Para desplegar el sitio se está usando Netlify y allí se configuró el nombre de dominio.
+
 ## Archivos
 
 Se están usando las siguientes librerías:
