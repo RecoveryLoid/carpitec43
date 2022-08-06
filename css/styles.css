@@ -3,7 +3,7 @@
 /*el negro está en el bootstrap*/
 	--main-color: #F5A63F; /*#FFBE00 /*60*/
 	/*white 20%*/ 
-	/*black 10% */
+	--black-color: #262626; /*black 10% */
 	--terciary-color: #F6F6F6; /*10*/
 }
 
@@ -187,6 +187,13 @@ blockquote p:after {
 	transition: .3 ease all;
 }
 
+.hoverlink:hover {
+	background-color: #F6F6F6;
+	color: var(--black-color) !important;
+	border-radius: 0.25rem;
+	transition: .7 ease all;
+}
+
 .bg-color-light{
 	background-color: var(--terciary-color);
 }
@@ -206,7 +213,6 @@ blockquote p:after {
 	}
 }
 
-
 .form-control{
 	box-shadow: none !important;
 	border: none;
@@ -220,4 +226,12 @@ blockquote p:after {
 
 .form-radius{
 	border-radius: 4px 32px 4px 32px;
+}
+
+.vr {
+    display: inline-block;
+    align-self: stretch;
+    width: 8px;
+    min-height: 1em;
+    background-color: var(--black-color);
 }
