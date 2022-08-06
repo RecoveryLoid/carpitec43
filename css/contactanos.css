@@ -1,0 +1,15 @@
+@import url("styles.css");
+
+.rectangle {
+    background-color: var(--main-color);
+    rotate: 75px;
+    z-index: 1;
+}
+
+.form-contact {
+    border-radius: 16px 0 0 16px !important;
+}
+
+.form-maps {
+    border-radius: 0 16px 16px 0 !important;
+}
