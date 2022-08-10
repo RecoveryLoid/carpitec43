@@ -1,15 +1,25 @@
 @import url("styles.css");
 
-.rectangle {
-    background-color: var(--main-color);
-    rotate: 75px;
-    z-index: 1;
+main {
+    background: url("../img/rectangle.svg") no-repeat center center fixed ;
 }
 
-.form-contact {
-    border-radius: 16px 0 0 16px !important;
+@media screen and (min-width: 1px) {
+    .form-contact {
+        border-radius: 16px 16px 0 0 !important;
+    }
+    
+    .form-maps {
+        border-radius: 0 0 16px 16px !important;
+    }
 }
 
-.form-maps {
-    border-radius: 0 16px 16px 0 !important;
+@media screen and (min-width: 991px) {
+    .form-contact {
+        border-radius: 16px 0 0 16px !important;
+    }
+
+    .form-maps {
+        border-radius: 0 16px 16px 0 !important;
+    }
 }
