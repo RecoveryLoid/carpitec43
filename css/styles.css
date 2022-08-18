@@ -1,9 +1,9 @@
- /*Paleta de colores*/
+/*Paleta de colores*/
 :root {
-/*el negro está en el bootstrap*/
+	/*el negro está en el bootstrap*/
 	--main-color: #F5A63F; /*#FFBE00 /*60*/
 	/*white 20%*/ 
-	/*black 10% */
+	--black-color: #262626; /*black 10% */
 	--terciary-color: #F6F6F6; /*10*/
 }
 
@@ -227,4 +227,12 @@ blockquote p:after {
 
 .form-radius{
 	border-radius: 4px 32px 4px 32px;
+}
+
+.vr {
+    display: inline-block;
+    align-self: stretch;
+    width: 5px;
+    min-height: 1em;
+    background-color: var(--black-color);
 }
