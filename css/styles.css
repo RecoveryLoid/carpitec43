@@ -187,6 +187,13 @@ blockquote p:after {
 	transition: .3 ease all;
 }
 
+.hoverlink:hover {
+	background-color: #F6F6F6;
+	color: var(--black-color) !important;
+	border-radius: 0.25rem;
+	transition: .7 ease all;
+}
+
 .bg-color-light{
 	background-color: var(--terciary-color);
 }
