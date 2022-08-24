@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Carpitec 43 | Contáctanos</title>
-		<link rel="icon" href="img/LogoBlanco.svg" type="image/x-icon">
+		<link rel="icon" href="../img/logoBlanco.svg" type="image/x-icon">
 		<!-- Bootstrap 5  CSS-->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<!-- Material Design Bootstrap 5 -->
@@ -30,8 +30,8 @@
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
 						<a class="nav-link hoverlink fw-bold h5" href="#">Conócenos</a>
-						<a class="nav-link hoverlink fw-bold h5" href="#">Diseños</a>
-						<a class="nav-link hoverlink fw-bold h5 bg-light text-muted rounded disabled" href="contactanos.html">Contáctanos</a>
+						<a class="nav-link hoverlink fw-bold h5 mx-2" href="#">Diseños</a>
+						<a class="nav-link hoverlink fw-bold h5 bg-light text-muted rounded disabled me-2" href="contactanos.html">Contáctanos</a>
 						<a class="nav-link hoverlink fw-bold h5" href="#">Materiales</a>
 					</div>
 				</div>
@@ -43,7 +43,7 @@
                     <h1 class="fw-bold display-4 text-color-main mb-0">CONECTA CON NOSOTROS</h1>
                     <div class="d-flex">
                         <div class="vr ms-2"></div>
-                        <h3 class="fw-normal ms-2">Llamanos y haremos tu sueño realidad</h3>
+                        <h3 class="fw-bold ms-2">Llamanos y haremos tu sueño realidad</h3>
                     </div>
                 </div>
                 <div class="container p-3">
@@ -60,13 +60,16 @@
 						<div class="col-12 col-sm-12 col-lg-4 card form-contact z-index-1">
 							<form class="m-4" action="">
 								<h2 class="mb-0"><strong class="fw-bold">Contactanos</strong></h2>
-								<p>
+								<p class="text-muted">
 									Dejanos tus ideas y te responderémos lo antes posible
 								</p>
-								<input class="form-control mt-4" placeholder="Nombre" type="text" required>
-								<input class="form-control my-4" placeholder="Email" type="email" required>
-								<textarea name="mensaje" placeholder="Mensaje" class="form-control" id="mensaje" cols="10" rows="5" required></textarea>
-								<input class="btn slide btn-main mt-4 h6 fw-bold" placeholder="Enviar" type="submit">
+								<div class="alert alert-danger" id="warning" role="alert"></div>
+								<input class="form-control mt-4" placeholder="Nombre" type="text" id="name" required>
+								<input class="form-control my-4" placeholder="Email" type="email" id="email" required>
+								<textarea name="mensaje" placeholder="Mensaje" class="form-control" id="message" cols="10" rows="5" required></textarea>
+								<button type="submit" onclick="validateForm()" id="submit" class="btn btn-main slide container-fluid mt-3">
+									<span class="h6 fw-bold">ENVIAR</span>
+								</button>
 							</form>
 						</div>
 						<div class="col-12 col-sm-12 col-lg-8 card form-maps m-0 p-0 z-index-1">
@@ -85,16 +88,16 @@
 			<div class="container py-5">
 				<div class="row">
 					<div class="col-12 col-sm-6 col-lg-4 mt-2">
-						<div class="card p-3 z-index-1 pb-0">
+						<div class="card p-3 z-index-1 pb-4">
 							<div class="row">
 								<div class="col-2 col-sm-4">
 									<div class="text-center">
-										<i class="fa-solid fa-location-dot text-color-main fa-3x"></i>
+										<i class="fa-solid fa-phone-flip text-color-main fa-3x"></i>
 									</div>
 								</div>
 								<div class="col-10 col-sm-8">
-									<h3 class="fw-bold mb-0">Ubicación</h3>
-									<p class="fw-light text-muted">Calle San Julian, Av. Libertador, Caracas 1050, Distrito Capital.</p>
+									<h3 class="fw-bold mb-0">Teléfono</h3>
+									<p class="fw-light text-muted">+58424-1115014</p>
 								</div>
 							</div>
 						</div>
@@ -109,22 +112,22 @@
 								</div>
 								<div class="col-10 col-sm-8">
 									<h3 class="fw-bold mb-0">E-mail</h3>
-									<p class="fw-light text-muted">carpitec43@carpitec43.com</p>
+									<p class="fw-light text-muted">equipo@carpitec43.com</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-12 col-sm-12 col-lg-4 mt-2">
-						<div class="card p-3 z-index-1 pb-4">
+						<div class="card p-3 z-index-1 pb-0">
 							<div class="row">
 								<div class="col-2 col-sm-4">
 									<div class="text-center">
-										<i class="fa-solid fa-phone-flip text-color-main fa-3x"></i>
+										<i class="fa-solid fa-location-dot text-color-main fa-3x"></i>
 									</div>
 								</div>
 								<div class="col-10 col-sm-8">
-									<h3 class="fw-bold mb-0">Teléfono</h3>
-									<p class="fw-light text-muted">+58424-154234234</p>
+									<h3 class="fw-bold mb-0">Ubicación</h3>
+									<p class="fw-light text-muted">Calle San Julian, Av. Libertador, Caracas 1050, Distrito Capital.</p>
 								</div>
 							</div>
 						</div>
@@ -187,6 +190,7 @@
 		</script>
 		<!-- Material Design Bootstrap 5 Js -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
-		<script src="js/anime.min.js"></script>
+		<script src="../js/anime.min.js"></script>
+		<script src="../js/validation.js"></script>
     </body>
 </html>
