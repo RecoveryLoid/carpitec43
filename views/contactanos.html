@@ -63,11 +63,11 @@
 								<p class="text-muted">
 									Dejanos tus ideas y te responderémos lo antes posible
 								</p>
-								<div class="alert text-white d-none p-2" id="warning" role="alert"></div>
+								<div class="alert text-white bg-danger d-none p-2" id="warning" role="alert"></div>
 								<input class="form-control mt-4" placeholder="Nombre" type="text" id="name" required>
 								<input class="form-control my-4" placeholder="Email" type="email" id="email" required>
 								<textarea name="mensaje" placeholder="Mensaje" class="form-control" id="message" cols="10" rows="5" required></textarea>
-								<button type="submit" onclick="validateForm()" id="submit" class="btn btn-main slide container-fluid mt-3">
+								<button type="submit" id="submit" class="btn btn-main slide container-fluid mt-3" disabled>
 									<span class="h6 fw-bold">ENVIAR</span>
 								</button>
 							</form>
