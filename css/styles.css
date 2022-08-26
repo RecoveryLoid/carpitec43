@@ -227,6 +227,14 @@ blockquote p:after {
 	border-radius: 4px 32px 4px 32px;
 }
 
+.form-control-danger {
+	border:  2px solid #F93154;
+}
+
+.form-control-danger:focus {
+	border:  2px solid #F93154;
+}
+
 .vr {
     display: inline-block;
     align-self: stretch;
