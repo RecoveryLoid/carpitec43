@@ -1,1 +1,8 @@
 @import url("styles.css");
+
+@media screen and (max-width: 1200px){
+
+    .img-section {
+        margin-top: 2rem;
+    }
+}
