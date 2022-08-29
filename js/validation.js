@@ -33,7 +33,7 @@ window.onload = function () {
         const warning = document.getElementById("warning");
 
         if (nameValue.length < 3) {
-            showError('active', 'El mínimo son 3 carácteres');
+            showError('active', 'El mínimo son 3 caracteres');
             borderError(nameData, 'active');
         }
         else if (!regexName.test(nameValue)) {
@@ -58,6 +58,20 @@ window.onload = function () {
         else {
             warning.classList.add('d-none');
             borderError(emailData, 'inactive');
+        }
+    })
+
+    messageData.addEventListener('input', function () {
+        const messageValue = messageData.value;
+        const warning = document.getElementById("warning");
+
+        if (messageValue.length < 20) {
+            showError('active', 'El mínimo son 20 caracteres');
+            borderError(messageData, 'active');
+        }
+        else {
+            warning.classList.add('d-none');
+            borderError(messageData, 'inactive');
         }
     })
 };
