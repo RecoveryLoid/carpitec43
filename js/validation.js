@@ -2,6 +2,8 @@ const disabledBtn = document.getElementById('submit');
 var nameData = document.getElementById('name');
 var emailData = document.getElementById('email');
 var messageData = document.getElementById('message');
+const warning = document.getElementById("warning");
+const regexSpace = (/^\s+|\s+$/);
 
 /* Evita el tooltip por defecto de html5 */
 emailData.addEventListener("invalid", function (event) {
@@ -30,9 +32,12 @@ window.onload = function () {
     nameData.addEventListener('input', function () {
         const regexName = /^[A-Za-zá-üñÑáéíóúÁÉÍÓÚ\s]+$/;
         const nameValue = nameData.value;
-        const warning = document.getElementById("warning");
 
-        if (nameValue.length < 3) {
+        if (regexSpace.test(nameValue)) {
+            showError('active', 'El campo no puede estar en blanco ni tener espacios en blanco');
+            borderError(nameData, 'active');
+        }
+        else if (nameValue.length < 3) {
             showError('active', 'El mínimo son 3 caracteres');
             borderError(nameData, 'active');
         }
@@ -53,27 +58,37 @@ window.onload = function () {
     emailData.addEventListener('input', function () {
         const validEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         const emailValue = emailData.value;
-        const warning = document.getElementById("warning");
 
-        if (!validEmail.test(emailValue)) {
+        console.log(regexSpace.test(emailValue));
+/*         console.log(regexSpace.test(emailValue)); */
+
+/*         if (!validEmail.test(emailValue)) {
             showError('active', 'Correo no válido');
             borderError(emailData, 'active');
-        }
-        else if (emailValue.length > 50) {
-            showError('active', 'El máximo son 50 caracteres');
+        } */
+        if (regexSpace.test(emailValue)) {
+            console.log("si");
+            showError('active', 'El campo no puede estar en blanco');
             borderError(emailData, 'active');
         }
-        else {
+/*         else if (emailValue.length > 50) {
+            showError('active', 'El máximo son 50 caracteres');
+            borderError(emailData, 'active');
+        } */
+/*         else {
             warning.classList.add('d-none');
             borderError(emailData, 'inactive');
-        }
+        } */
     })
 
     messageData.addEventListener('input', function () {
         const messageValue = messageData.value;
-        const warning = document.getElementById("warning");
 
-        if (messageValue.length < 20) {
+        if (regexSpace.test(messageValue)) {
+            showError('active', 'El campo no puede estar en blanco ni tener espacios en blanco');
+            borderError(messageData, 'active');
+        }
+        else if (messageValue.length < 20) {
             showError('active', 'El mínimo son 20 caracteres');
             borderError(messageData, 'active');
         }
@@ -89,8 +104,6 @@ window.onload = function () {
 };
 
 function showError(status, errorText) {
-
-    const warning = document.getElementById("warning");
 
     if (status === 'active') {
         warning.innerHTML = errorText;
