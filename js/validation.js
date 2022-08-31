@@ -28,12 +28,16 @@ window.onload = function () {
     });
 
     nameData.addEventListener('input', function () {
-        const nameValue = nameData.value;
         const regexName = /^[A-Za-zá-üñÑáéíóúÁÉÍÓÚ\s]+$/;
+        const nameValue = nameData.value;
         const warning = document.getElementById("warning");
 
         if (nameValue.length < 3) {
             showError('active', 'El mínimo son 3 caracteres');
+            borderError(nameData, 'active');
+        }
+        else if (nameValue.length > 50) {
+            showError('active', 'El máximo son 50 caracteres');
             borderError(nameData, 'active');
         }
         else if (!regexName.test(nameValue)) {
@@ -55,6 +59,10 @@ window.onload = function () {
             showError('active', 'Correo no válido');
             borderError(emailData, 'active');
         }
+        else if (emailValue.length > 50) {
+            showError('active', 'El máximo son 50 caracteres');
+            borderError(emailData, 'active');
+        }
         else {
             warning.classList.add('d-none');
             borderError(emailData, 'inactive');
@@ -67,6 +75,10 @@ window.onload = function () {
 
         if (messageValue.length < 20) {
             showError('active', 'El mínimo son 20 caracteres');
+            borderError(messageData, 'active');
+        }
+        else if (messageValue.length > 255) {
+            showError('active', 'El máximo son 255 caracteres');
             borderError(messageData, 'active');
         }
         else {
