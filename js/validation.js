@@ -3,12 +3,6 @@ var nameData = document.getElementById('name');
 var emailData = document.getElementById('email');
 var messageData = document.getElementById('message');
 const warning = document.getElementById("warning");
-const regexSpace = (/^\s+|\s+$/);
-
-/* Evita el tooltip por defecto de html5 */
-emailData.addEventListener("invalid", function (event) {
-    event.preventDefault();
-});
 
 window.onload = function () {
 
@@ -26,18 +20,21 @@ window.onload = function () {
             else {
                 showError('inactive', 'text');
             }
-        })
+        });
+    });
+
+    /* Evita el tooltip por defecto de html5 para cada input */
+    formData.forEach((element) => {
+        element.addEventListener("invalid", function (event) {
+            event.preventDefault();
+        });
     });
 
     nameData.addEventListener('input', function () {
         const regexName = /^[A-Za-zá-üñÑáéíóúÁÉÍÓÚ\s]+$/;
         const nameValue = nameData.value;
 
-        if (regexSpace.test(nameValue)) {
-            showError('active', 'El campo no puede estar en blanco ni tener espacios en blanco');
-            borderError(nameData, 'active');
-        }
-        else if (nameValue.length < 3) {
+        if (nameValue.length < 3) {
             showError('active', 'El mínimo son 3 caracteres');
             borderError(nameData, 'active');
         }
@@ -46,49 +43,37 @@ window.onload = function () {
             borderError(nameData, 'active');
         }
         else if (!regexName.test(nameValue)) {
-            showError('active', 'El nombre no debe incluir números ni carácteres especiales');
+            showError('active', 'El nombre no debe incluir números ni caracteres especiales');
             borderError(nameData, 'active');
         }
         else {
             warning.classList.add('d-none');
             borderError(nameData, 'inactive');
         }
-    })
+    });
 
     emailData.addEventListener('input', function () {
         const validEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         const emailValue = emailData.value;
 
-        console.log(regexSpace.test(emailValue));
-/*         console.log(regexSpace.test(emailValue)); */
-
-/*         if (!validEmail.test(emailValue)) {
+        if (!validEmail.test(emailValue)) {
             showError('active', 'Correo no válido');
             borderError(emailData, 'active');
-        } */
-        if (regexSpace.test(emailValue)) {
-            console.log("si");
-            showError('active', 'El campo no puede estar en blanco');
-            borderError(emailData, 'active');
         }
-/*         else if (emailValue.length > 50) {
+        else if (emailValue.length > 50) {
             showError('active', 'El máximo son 50 caracteres');
             borderError(emailData, 'active');
-        } */
-/*         else {
+        }
+        else {
             warning.classList.add('d-none');
             borderError(emailData, 'inactive');
-        } */
-    })
+        }
+    });
 
     messageData.addEventListener('input', function () {
         const messageValue = messageData.value;
 
-        if (regexSpace.test(messageValue)) {
-            showError('active', 'El campo no puede estar en blanco ni tener espacios en blanco');
-            borderError(messageData, 'active');
-        }
-        else if (messageValue.length < 20) {
+        if (messageValue.length < 20) {
             showError('active', 'El mínimo son 20 caracteres');
             borderError(messageData, 'active');
         }
@@ -100,7 +85,7 @@ window.onload = function () {
             warning.classList.add('d-none');
             borderError(messageData, 'inactive');
         }
-    })
+    });
 };
 
 function showError(status, errorText) {
