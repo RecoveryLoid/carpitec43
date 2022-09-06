@@ -1,6 +1,6 @@
- /*Paleta de colores*/
+/*Paleta de colores*/
 :root {
-/*el negro está en el bootstrap*/
+	/*el negro está en el bootstrap*/
 	--main-color: #F5A63F; /*#FFBE00 /*60*/
 	/*white 20%*/ 
 	--black-color: #262626; /*black 10% */
