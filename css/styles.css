@@ -74,14 +74,14 @@ body{
 	position: relative;
 }
 .subline:after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-15%;
-  right:5px;
-  background: white;
-  height:4px;
-  width: 65%;
+	content:"";
+	position:absolute;
+	left:0;
+	bottom:-15%;
+	right:5px;
+	background: white;
+	height:4px;
+	width: 65%;
 }
 
 .line-h{
@@ -105,10 +105,10 @@ body{
 		width: 30%;
 	}
 	.logo{
-	    position: absolute;
-	    top: -10%;
-	    left: 70%;
-	    z-index: 10; 
+		position: absolute;
+		top: -10%;
+		left: 70%;
+		z-index: 10; 
 	}
 	.imagen .logo{
 		width: 30%;
@@ -118,7 +118,6 @@ body{
 	.text-logo{
 		display: none !important;
 	}
-
 }
 
 @keyframes spin {
@@ -127,9 +126,9 @@ body{
 }
 
 #wheel {
-  animation: spin 4s infinite alternate;
-  transform-box: fill-box;
-  transform-origin: center;
+	animation: spin 4s infinite alternate;
+	transform-box: fill-box;
+	transform-origin: center;
 }
 
 blockquote {
@@ -171,7 +170,7 @@ blockquote p:after {
 	position: absolute;
 	z-index: 1;
 	top: 0;
-	left: calc(-100% - 80px);
+	left: calc(-150% - 80px);
 	border-bottom: 80px solid var(--main-color);
 	border-right: 80px solid transparent;
 	transition: .4s ease-in-out all;
@@ -213,7 +212,6 @@ blockquote p:after {
 	}
 }
 
-
 .form-control{
 	box-shadow: none !important;
 	border: none;
@@ -229,10 +227,22 @@ blockquote p:after {
 	border-radius: 4px 32px 4px 32px;
 }
 
+.form-control-danger {
+	border:  2px solid #F93154;
+}
+
+.form-control-danger:focus {
+	border:  2px solid #F93154;
+}
+
 .vr {
     display: inline-block;
     align-self: stretch;
     width: 5px;
     min-height: 1em;
     background-color: var(--black-color);
+}
+
+.z-index-1 {
+	z-index: 10;
 }

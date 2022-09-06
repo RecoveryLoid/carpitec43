@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Carpitec 43 | Contáctanos</title>
+		<link rel="icon" href="../img/logoBlanco.svg" type="image/x-icon">
+		<!-- Bootstrap 5  CSS-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<!-- Material Design Bootstrap 5 -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+		<!-- Fontawesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- Google fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web" />
+		<!-- Normalize -->
+		<link rel="stylesheet" href="../css/normalize.css">
+		<!-- Estilos nativos -->
+		<link rel="stylesheet" href="../css/contactanos.css">
+	</head>
+    <body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="../index.html">
+					<img src="../img/logoBlanco.svg" alt="logo de Carpitec43" width="60" height="60">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fas fa-caret-down"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<a class="nav-link hoverlink fw-bold h5 px-1 me-2" href="#">Conócenos</a>
+						<a class="nav-link hoverlink fw-bold h5 px-1 me-2" href="#">Diseños</a>
+						<a class="nav-link hoverlink fw-bold h5 bg-light text-muted rounded disabled px-1 me-2" href="contactanos.html">
+							Contáctanos
+						</a>
+						<a class="nav-link hoverlink fw-bold h5 px-1" href="#">Materiales</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+        <header>
+            <div class="container">
+                <div class="ms-3 mt-5">
+                    <h1 class="fw-bold display-4 text-color-main mb-0">CONECTA CON NOSOTROS</h1>
+                    <div class="d-flex">
+                        <div class="vr ms-2"></div>
+                        <h3 class="fw-bold ms-2">Llamanos y haremos tu sueño realidad</h3>
+                    </div>
+                </div>
+                <div class="container p-3">
+                    <div class="text-end">
+                        <img src="../img/profile.svg" width="900" class="img-fluid" alt="contactanos carpitec 43 imágen">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="bg-color-light position-relative">
+			<div class="container">
+				<div class="container pt-5">
+					<div class="row">
+						<div class="col-12 col-sm-12 col-lg-4 card form-contact z-index-1">
+							<form class="m-4" action="">
+								<h2 class="mb-0"><strong class="fw-bold">Contactanos</strong></h2>
+								<p class="text-muted">
+									Dejanos tus ideas y te responderémos lo antes posible
+								</p>
+								<div class="alert text-white bg-danger d-none p-2" id="warning" role="alert"></div>
+								<input class="form-control mt-4" placeholder="Nombre" type="text" id="name" required>
+								<input
+									class="form-control my-4"
+									placeholder="Email"
+									type="email"
+									id="email"
+									required
+								>
+								<textarea
+									name="mensaje"
+									placeholder="Mensaje"
+									class="form-control"
+									id="message"
+									cols="10"
+									rows="5"
+									required
+								></textarea>
+								<button type="submit" id="submit" class="btn btn-main slide container-fluid mt-3" disabled>
+									<span class="h6 fw-bold">ENVIAR</span>
+								</button>
+							</form>
+						</div>
+						<div class="col-12 col-sm-12 col-lg-8 card form-maps m-0 p-0 z-index-1">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.7451081597918!2d-66.89291747079153!3d10.502207099531763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5972a4031699%3A0x5af39fc1d65c935!2sCarpitec43!5e0!3m2!1ses!2sve!4v1660191006062!5m2!1ses!2sve"
+								height="490"
+								class="form-maps"
+								loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"
+							>
+							</iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container py-5">
+				<div class="row">
+					<div class="col-12 col-lg-6 col-xl-4 mt-2">
+						<div class="card p-3 z-index-1 pb-4">
+							<div class="row">
+								<div class="col-2 col-sm-4">
+									<div class="text-center">
+										<i class="fa-solid fa-phone-flip text-color-main fa-3x"></i>
+									</div>
+								</div>
+								<div class="col-10 col-sm-8">
+									<h3 class="fw-bold mb-0">Teléfono</h3>
+									<p class="fw-light text-muted">+58424-1115014</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6 col-xl-4 mt-2">
+						<div class="card p-3 z-index-1 pb-4">
+							<div class="row">
+								<div class="col-2 col-sm-4">
+									<div class="text-center">
+										<i class="fa-solid fa-envelopes-bulk text-color-main fa-3x"></i>
+									</div>
+								</div>
+								<div class="col-10 col-sm-8">
+									<h3 class="fw-bold mb-0">E-mail</h3>
+									<p class="fw-light text-muted">equipo@carpitec43.com</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-12 col-xl-4 mt-2">
+						<div class="card p-3 z-index-1 pb-0">
+							<div class="row">
+								<div class="col-2 col-sm-4">
+									<div class="text-center">
+										<i class="fa-solid fa-location-dot text-color-main fa-3x"></i>
+									</div>
+								</div>
+								<div class="col-10 col-sm-8">
+									<h3 class="fw-bold mb-0">Ubicación</h3>
+									<p class="fw-light text-muted">Calle San Julian, Av. Libertador, Caracas 1050, Distrito Capital.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </main>
+		<footer class="bg-dark text-center text-white">
+			<div class="container p-3">
+				<div class="row">
+					<div class="col">
+						<div class="container d-flex">
+							<img src="../img/logoBlanco.svg" alt="Footer carpitec logo" width="100" height="100">
+							<div class="ms-2">
+								<h1 class="h1 text-color-main fw-bold text-start mb-0">CARPITEC43</h1>
+								<h2 class="h4 text-start">EXELENCIA Y CALIDAD</h2>
+							</div>
+						</div>
+						<div class="container d-flex mt-4">
+							<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+								<i class="fab fa-facebook-f"></i>
+							</a>
+							<a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/carpitec43/">
+								<i class="fab fa-instagram"></i>
+							</a>
+							<a class="btn btn-outline-light btn-floating m-1" href="#!">
+								<i class="fab fa-twitter"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col">
+						<h2 class="fw-bold">Contacto</h2>
+						<ul class="list-unstyled mb-0">
+							<li><i class="fa-solid fa-house me-3 my-2"></i> Ubicación</li>
+							<li><i class="fa-solid fa-mobile-screen-button me-3 my-2"></i>+58000-000-000</li>
+							<li><i class="fa-solid fa-envelope me-3 my-2"></i>carpitec43@gmail.com</li>
+							<li><i class="fa-solid fa-globe me-3 my-2"></i>www.carpitec43.com</li>
+						</ul>
+					</div>
+				</div>
+				<div class="container d-flex mt-4">
+					<a href="#!" class="me-2 text-white">Términos y Condiciones</a>
+					<a href="#!" class=" text-white">Privacidad</a>
+				</div>
+			</div>
+			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+				© 2021
+				<a class="text-white" href="https://carpitec43.com/">Carpitec43.com</a>
+			</div>
+			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.4);">
+				Desarrollado con <i class="fas fa-heart text-danger"></i> por
+				<a class="text-white" href="https://carpitec43.com/">Recoveryloid.com</a>
+			</div>
+		</footer>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		>
+		</script>
+		<!-- Material Design Bootstrap 5 Js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+		<script src="../js/anime.min.js"></script>
+		<script src="../js/validation.js"></script>
+    </body>
+</html>

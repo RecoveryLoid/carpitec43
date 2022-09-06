@@ -1,9 +1,3 @@
-window.onload = function() {
-
- console.log("Script funcionando");
-
-}
-
 var uno = anime({
   targets: '.layer',
   translateY: 5,
