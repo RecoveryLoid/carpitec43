@@ -252,9 +252,13 @@ blockquote p:after {
 }
 
 .link:hover a {
-	color: var(--main-color) !important ;
+	color: var(--main-color) !important;
 }
 
-.icon-social {
+.social-icon {
 	padding: 0.6rem;
+}
+
+.social-icon:hover {
+	color: var(--main-color) !important;
 }
