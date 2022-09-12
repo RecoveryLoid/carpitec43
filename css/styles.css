@@ -250,3 +250,11 @@ blockquote p:after {
 .link {
 	list-style: none;
 }
+
+.link:hover a {
+	color: var(--main-color) !important ;
+}
+
+.icon-social {
+	padding: 0.6rem;
+}
