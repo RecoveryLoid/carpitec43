@@ -118,6 +118,10 @@ body{
 	.text-logo{
 		display: none !important;
 	}
+
+	.bg-img {
+		background-size: 600px !important;
+	}
 }
 
 @keyframes spin {
@@ -261,4 +265,12 @@ blockquote p:after {
 
 .social-icon:hover {
 	color: var(--main-color) !important;
+}
+
+.bg-img {
+	background-image: url('../img/disco.svg');
+	background-size: 450px;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 5rem 0 5rem 0;
 }
