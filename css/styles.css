@@ -267,6 +267,10 @@ blockquote p:after {
 	color: var(--main-color) !important;
 }
 
+.social-icon-facebook {
+	padding: 0.6rem 0.8rem;
+}
+
 .bg-img {
 	background-image: url('../img/disco.svg');
 	background-size: 450px;
