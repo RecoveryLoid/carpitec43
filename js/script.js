@@ -46,3 +46,35 @@ var rotarFort = anime ({
   easing: 'easeInOutQuad'
 
 });
+
+const texto = document.querySelector('.text');
+texto.innerHTML = texto.textContent.replace(/\S/g, "<span>$&</span>");
+
+anime.timeline({
+  loop: true
+})
+
+.add({
+  targets: '.text span',
+  translateY: [-600, 0],
+  scale: [5,1],
+  endDelay: 1000,
+  easing: "easeOutExpo",
+  duration: 1500
+})
+
+const texto2 = document.querySelector('.text2');
+texto2.innerHTML = texto2.textContent.replace(/\S/g, "<span>$&</span>");
+
+anime.timeline({
+  loop: true
+})
+
+.add({
+  targets: '.text2 span',
+  translateY: [-600, 0],
+  scale: [5,1],
+  endDelay: 1000,
+  easing: "easeOutExpo",
+  duration: 1500
+})
