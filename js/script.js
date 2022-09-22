@@ -51,7 +51,7 @@ const texto = document.querySelector('.text');
 texto.innerHTML = texto.textContent.replace(/\S/g, "<span>$&</span>");
 
 anime.timeline({
-  loop: true
+  loop: false
 })
 
 .add({
@@ -67,7 +67,7 @@ const texto2 = document.querySelector('.text2');
 texto2.innerHTML = texto2.textContent.replace(/\S/g, "<span>$&</span>");
 
 anime.timeline({
-  loop: true
+  loop: false
 })
 
 .add({
