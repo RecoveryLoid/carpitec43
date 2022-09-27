@@ -47,34 +47,23 @@ var rotarFort = anime ({
 
 });
 
-const texto = document.querySelector('.text');
-texto.innerHTML = texto.textContent.replace(/\S/g, "<span>$&</span>");
+function replaceContentAnimation(selector) {
+  const elementToSelect = document.querySelector(selector);
+  elementToSelect.innerHTML = elementToSelect.textContent.replace(/\S/g, "<span>$&</span>");
 
-anime.timeline({
-  loop: false
-})
+  anime.timeline({
+    loop: false
+  })
+  
+  .add({
+    targets: [selector,'span'],
+    translateY: [-600, 0],
+    scale: [5,1],
+    endDelay: 1000,
+    easing: "easeOutExpo",
+    duration: 1500
+  })
+}
 
-.add({
-  targets: '.text span',
-  translateY: [-600, 0],
-  scale: [5,1],
-  endDelay: 1000,
-  easing: "easeOutExpo",
-  duration: 1500
-})
-
-const texto2 = document.querySelector('.text2');
-texto2.innerHTML = texto2.textContent.replace(/\S/g, "<span>$&</span>");
-
-anime.timeline({
-  loop: false
-})
-
-.add({
-  targets: '.text2 span',
-  translateY: [-600, 0],
-  scale: [5,1],
-  endDelay: 1000,
-  easing: "easeOutExpo",
-  duration: 1500
-})
+replaceContentAnimation(".text");
+replaceContentAnimation(".text2");
