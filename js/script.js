@@ -46,3 +46,24 @@ var rotarFort = anime ({
   easing: 'easeInOutQuad'
 
 });
+
+function replaceContentAnimation(selector) {
+  const elementToSelect = document.querySelector(selector);
+  elementToSelect.innerHTML = elementToSelect.textContent.replace(/\S/g, "<span>$&</span>");
+
+  anime.timeline({
+    loop: false
+  })
+  
+  .add({
+    targets: [selector,'span'],
+    translateY: [-600, 0],
+    scale: [5,1],
+    endDelay: 1000,
+    easing: "easeOutExpo",
+    duration: 1500
+  })
+}
+
+replaceContentAnimation(".text");
+replaceContentAnimation(".text2");
