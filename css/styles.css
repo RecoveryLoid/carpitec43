@@ -246,3 +246,13 @@ blockquote p:after {
 .z-index-1 {
 	z-index: 10;
 }
+
+.text span {
+	position: relative;
+	display: inline-block;
+}
+
+.text2 span {
+	position: relative;
+	display: inline-block;
+}
