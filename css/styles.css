@@ -145,7 +145,7 @@ blockquote p:before {
     font-size:90px;
     color:dark;
     position: absolute; 
-    top: -0.1em;
+    top: -0.5em;
     left: -0.5em; 
 } 
 blockquote p:after { 
@@ -153,8 +153,8 @@ blockquote p:after {
     font-size:90px;
     color:dark;
     position: absolute; 
-    bottom: -0.6em;
-    right: 0; 
+    bottom: -0.7em;
+    right: 0.5; 
 }
 
 .btn-main{
