@@ -17,7 +17,7 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    bottom: 72%;
+    bottom: 73%;
     z-index: 10;
 }
 
@@ -29,9 +29,8 @@ body{
 .text-logo{
     position: absolute;
     margin: auto;
-    bottom: 66%;
+    bottom: 65%;
     z-index: 10;
-	font-size: small;
 }
 
 .text-color-main{
@@ -56,7 +55,7 @@ body{
 
 .text-hero{
 	margin-top: 22rem;
-	margin-right: 4rem !important;
+	margin-right: 5rem !important;
 }
 
 .relative{
