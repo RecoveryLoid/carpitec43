@@ -73,6 +73,7 @@ body{
 .subline{
 	position: relative;
 }
+
 .subline:after{
 	content:"";
 	position:absolute;
@@ -151,7 +152,8 @@ blockquote p:before {
     position: absolute; 
     top: -0.1em;
     left: -0.5em; 
-} 
+}
+
 blockquote p:after { 
     content: "\201D";
     font-size:90px;
@@ -278,3 +280,14 @@ blockquote p:after {
 	background-repeat: no-repeat;
 	padding: 5rem 0 5rem 0;
 }
+
+.text span {
+	position: relative;
+	display: inline-block;
+}
+
+.text2 span {
+	position: relative;
+	display: inline-block;
+}
+
