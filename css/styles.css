@@ -73,6 +73,7 @@ body{
 .subline{
 	position: relative;
 }
+
 .subline:after{
 	content:"";
 	position:absolute;
@@ -118,6 +119,10 @@ body{
 	.text-logo{
 		display: none !important;
 	}
+
+	.bg-img {
+		background-size: 600px !important;
+	}
 }
 
 @keyframes spin {
@@ -147,7 +152,8 @@ blockquote p:before {
     position: absolute; 
     top: -0.1em;
     left: -0.5em; 
-} 
+}
+
 blockquote p:after { 
     content: "\201D";
     font-size:90px;
@@ -247,6 +253,34 @@ blockquote p:after {
 	z-index: 10;
 }
 
+.link {
+	list-style: none;
+}
+
+.link:hover a {
+	color: var(--main-color) !important;
+}
+
+.social-icon {
+	padding: 0.6rem;
+}
+
+.social-icon:hover {
+	color: var(--main-color) !important;
+}
+
+.social-icon-facebook {
+	padding: 0.6rem 0.8rem;
+}
+
+.bg-img {
+	background-image: url('../img/disco.svg');
+	background-size: 450px;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 5rem 0 5rem 0;
+}
+
 .text span {
 	position: relative;
 	display: inline-block;
@@ -256,3 +290,4 @@ blockquote p:after {
 	position: relative;
 	display: inline-block;
 }
+
