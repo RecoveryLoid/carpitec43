@@ -152,14 +152,8 @@ body{
     position: absolute; 
     top: -0.5em;
     left: -0.5em; 
-<<<<<<< HEAD
 } 
 .marks p:after { 
-=======
-}
-
-blockquote p:after { 
->>>>>>> dab23a4f3959a140bfb774e18409b438f9dfa2c8
     content: "\201D";
     font-size:90px;
     color:dark;
