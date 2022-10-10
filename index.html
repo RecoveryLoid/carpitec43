@@ -288,12 +288,15 @@
 							</div>
 						</div>
 						<div class="col bg-light m-3 form-radius">
-							<form  class="m-4" action="">
+							<form class="m-4" id="form">
 								<h2>Déjanos un <strong class="fw-bold text-color-main">mensaje</strong> </h2>
-								<input class="form-control mt-4" placeholder="Nombre" type="text" required>
-								<input class="form-control my-4" placeholder="Email" type="email" required>
+								<input class="form-control mt-4" placeholder="Nombre" type="text" id="name" required>
+								<input class="form-control my-4" placeholder="Email" type="email" id="email" required>
+								<input class="form-control my-4" placeholder="Asunto" tyoe="text" id="subject" type="text">
 								<textarea name="mensaje" placeholder="Mensaje" class="form-control" id="mensaje" cols="10" rows="5" required></textarea>
-								<input class="btn slide btn-main mt-4 h6 fw-bold" type="submit">
+								<button id="submit" onclick="{sendEmail()}" class="btn btn-main slide container-fluid mt-3">
+									<span class="h6 fw-bold">ENVIAR</span>
+								</button>
 							</form>
 						</div>
 					</div>
@@ -394,6 +397,11 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
 		></script>
 		<script src="js/anime.min.js"></script>
+        <!-- Emailjs -->
+		<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <!-- Sweet Alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.all.min.js"></script>
+		<script src="js/validation.js"></script>
 		<script src="js/script.js"></script>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-650EX20YVC"></script>

@@ -1,6 +1,7 @@
 const disabledBtn = document.getElementById('submit');
 var nameData = document.getElementById('name');
 var emailData = document.getElementById('email');
+var subjectData = document.getElementById('subject');
 var messageData = document.getElementById('message');
 const warning = document.getElementById("warning");
 
@@ -88,6 +89,7 @@ window.onload = function () {
     });
 };
 
+
 function showError(status, errorText) {
 
     if (status === 'active') {
@@ -110,3 +112,86 @@ function borderError(input, status) {
         input.classList.remove('form-control-danger');
     }
 }
+
+/* function sendEmail(){
+
+    (function() {
+      // User Id
+      emailjs.init("user_ID"); //please encrypted user id for malicious attacks
+    })();
+
+    var name = document.querySelector('#name').value;
+    var email = document.querySelector('#email').value;
+    var asunto = document.querySelector('#issue').value;
+    var mensaje = document.querySelector('#message').value;
+    console.log(nombre);
+
+    var templateParams = {
+        from_name: nombre,
+        fromEmail: email,
+        issue: cuestion,
+        message: mensaje
+    };
+    // Service and template
+    emailjs.send('service_id', 'template_id', templateParams)
+        .then(function(response) {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Enviado con exito',
+            showConfirmButton: false,
+            timer: 1500
+        })
+        console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Fallo al enviar el mensaje',
+        })
+        console.log('FAILED...', error);
+    });
+
+} */
+
+const btnSubmit = document.getElementById('submit');
+
+function sendEmail(e) {
+    e.preventDefault();
+
+    btnSubmit.value = 'Enviando...';
+
+    const serviceID = 'service_bfkltwi';
+    const templateID = 'template_uqwmame';
+
+    var name = nameData.value;
+    var email = emailData.value;
+    var subject = subjectData.value;
+    var message = messageData.value;
+
+    var templateParams = {
+        subject: subject,
+        email: email,
+        name: name,
+        message: message
+    };
+
+    emailjs.sendForm(serviceID, templateID, templateParams)
+    .then(() => {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Enviado con exito',
+            showConfirmButton: false,
+            timer: 1500
+        })
+        console.log('SUCCESS!', response.status, response.text);
+    }, (err) => {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Fallo al enviar el mensaje',
+        })
+        console.log('FAILED...', error);
+    });
+};
