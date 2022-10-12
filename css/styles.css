@@ -136,31 +136,30 @@ body{
 	transform-origin: center;
 }
 
-blockquote {
+.marks {
 	position: relative; 
 	max-width: 400px; 
 }
 
-blockquote p {
+.marks p {
     font-size:21px;
 }
 
-blockquote p:before { 
+.marks p:before { 
     content: "\201C";
     font-size:90px;
     color:dark;
     position: absolute; 
-    top: -0.1em;
+    top: -0.5em;
     left: -0.5em; 
-}
-
-blockquote p:after { 
+} 
+.marks p:after { 
     content: "\201D";
     font-size:90px;
     color:dark;
     position: absolute; 
-    bottom: -0.6em;
-    right: 0; 
+    bottom: -0.75em;
+    right: 0.5; 
 }
 
 .btn-main{
