@@ -17,7 +17,7 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    bottom: 70%;
+    bottom: 73%;
     z-index: 10;
 }
 
@@ -29,7 +29,7 @@ body{
 .text-logo{
     position: absolute;
     margin: auto;
-    bottom: 67%;
+    bottom: 65%;
     z-index: 10;
 }
 
