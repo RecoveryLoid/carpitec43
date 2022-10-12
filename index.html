@@ -258,12 +258,13 @@
 				<div class="p-5 text-center">
 					<h2 class="h1"><strong class="fw-bold text-color-main">CONTRUIMOS</strong> TU FUTURO</h2>
 					<div class="mx-5">
-						<p class="fst-italic mt-5 h5">Diseñamos a tú estilo: clásico, convencional, moderno, minimalista o sofisticado.
+						<p class="fst-italic mt-5 h5">
+							Diseñamos a tú estilo: clásico, convencional, moderno, minimalista o sofisticado.
 							Puedes contactarnos y preguntar sin compromiso alguno.
 							<br>
 							<br>
-						   <b>¿Qué esperas para realizar el mueble de tus sueños?</b>
-					   </p>
+							<b>¿Qué esperas para realizar el mueble de tus sueños?</b>
+						</p>
 					</div>
 				</div>
 			</section>
@@ -284,12 +285,29 @@
 							</div>
 						</div>
 						<div class="col bg-light m-3 form-radius">
-							<form  class="m-4" action="">
-								<h2>Déjanos un <strong class="fw-bold text-color-main">mensaje</strong> </h2>
-								<input class="form-control mt-4" placeholder="Nombre" type="text" required>
-								<input class="form-control my-4" placeholder="Email" type="email" required>
-								<textarea name="mensaje" placeholder="Mensaje" class="form-control" id="mensaje" cols="10" rows="5" required></textarea>
-								<input class="btn slide btn-main mt-4 h6 fw-bold" type="submit">
+							<form class="m-4" action="">
+								<h2>Déjanos un <strong class="fw-bold text-color-main">mensaje</strong></h2>
+								<div class="alert text-white bg-danger d-none p-2" id="warning" role="alert"></div>
+								<input class="form-control mt-4" placeholder="Nombre" type="text" id="name" required>
+								<input
+									class="form-control my-4"
+									placeholder="Email"
+									type="email"
+									id="email"
+									required
+								>
+								<textarea
+									name="mensaje"
+									placeholder="Mensaje"
+									class="form-control"
+									id="message"
+									cols="10"
+									rows="5"
+									required
+								></textarea>
+								<button type="submit" id="submit" class="btn btn-main slide container-fluid mt-3" disabled>
+									<span class="h6 fw-bold">ENVIAR</span>
+								</button>
 							</form>
 						</div>
 					</div>
@@ -391,6 +409,7 @@
 		></script>
 		<script src="js/anime.min.js"></script>
 		<script src="js/script.js"></script>
+		<script src="js/validation.js"></script>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-650EX20YVC"></script>
 		<script src="js/googleAnalytics.js"></script>
