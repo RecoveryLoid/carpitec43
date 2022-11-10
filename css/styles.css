@@ -54,7 +54,6 @@ body{
 }
 
 .text-hero{
-    margin-top: 22rem;
     margin-right: 4rem !important;
 }
 
@@ -65,7 +64,7 @@ body{
 .image-hero{
     position: absolute;
     right: 0;
-    top: 22%;
+    top: 13%;
     width: 20vw;
     height: auto;
 }
@@ -89,10 +88,22 @@ body{
     line-height: 40px !important;
 }
 
+@media screen and (max-width: 1024px){
+    .image-hero{
+        top: 23%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text2 {
+        font-size: 42px !important;
+    }
+}
+
 @media screen and (max-width: 575px){
 
     .border-white{
-    border-top: none;
+        border-top: none;
         border-bottom: none;
         border-left: 6px solid white;
         width: 95%;
@@ -125,6 +136,26 @@ body{
     }
 }
 
+@media screen and (max-width: 375px){
+    .image-hero{
+        top: -18% !important;
+    }
+
+    .text2 {
+        font-size: 41px !important;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .image-hero{
+        top: -24% !important;
+    }
+
+    .text2 {
+        font-size: 34px !important;
+    }
+}
+
 @keyframes spin {
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
@@ -147,16 +178,16 @@ body{
 
 .marks p:before { 
     content: "\201C";
-    font-size:90px;
-    color:dark;
+    font-size: 90px;
+    color: dark;
     position: absolute; 
     top: -0.5em;
     left: -0.5em; 
 } 
 .marks p:after { 
     content: "\201D";
-    font-size:90px;
-    color:dark;
+    font-size: 90px;
+    color: dark;
     position: absolute; 
     bottom: -0.75em;
     right: 0.5; 

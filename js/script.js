@@ -57,7 +57,7 @@ function replaceContentAnimation(selector) {
   
   .add({
     targets: [selector,'span'],
-    translateY: [-600, 0],
+    translateY: [-600, 6],
     scale: [5,1],
     endDelay: 1000,
     easing: "easeOutExpo",
