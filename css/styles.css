@@ -290,3 +290,6 @@ body{
 	display: inline-block;
 }
 
+.color-mask-dark {
+	background-color:rgba(17, 17, 17, 0.068);
+}
