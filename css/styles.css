@@ -94,6 +94,12 @@ body{
     }
 }
 
+@media screen and (max-width: 768px) {
+    .text2 {
+        font-size: 42px !important;
+    }
+}
+
 @media screen and (max-width: 575px){
 
     .border-white{
@@ -134,11 +140,19 @@ body{
     .image-hero{
         top: -18% !important;
     }
+
+    .text2 {
+        font-size: 41px !important;
+    }
 }
 
 @media screen and (max-width: 320px){
     .image-hero{
         top: -24% !important;
+    }
+
+    .text2 {
+        font-size: 34px !important;
     }
 }
 
@@ -303,7 +317,6 @@ body{
 }
 
 .text2 span {
-    font-size: 34px;
     position: relative;
     display: inline-block;
 }
