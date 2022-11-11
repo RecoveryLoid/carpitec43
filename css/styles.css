@@ -324,3 +324,32 @@ body{
 .color-mask-dark {
     background-color:rgba(17, 17, 17, 0.068);
 }
+
+.st0 {
+    fill: #262626;
+}
+
+.st1 {
+    fill: none;
+    stroke: #262626;
+    stroke-width: 12;
+}
+
+.st2 {
+    fill: none;
+    stroke: #262626;
+    stroke-width: 4;
+}
+
+.st3 {
+    fill: none;
+    stroke: #262626;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+.st4 {
+    fill: none;
+    stroke: #262626;
+    stroke-width: 2;
+}
