@@ -1,0 +1,14 @@
+name: PR update
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  autoupdate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Update PR
+        uses: maxkomarychev/pr-updater-action@v1.0.0
